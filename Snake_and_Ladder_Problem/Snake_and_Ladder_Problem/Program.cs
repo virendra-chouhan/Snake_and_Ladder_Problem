@@ -19,7 +19,7 @@ namespace Snake_and_Ladder_Problem
                 Random random = new Random();
                 int rolls = random.Next(1, 6);
                 Console.WriteLine("Player 1 rolls the die " + rolls);
-
+                int count_of_die_rolls = 0;
 
                 int check = random.Next(1, 4);
                 switch (check)
@@ -32,7 +32,8 @@ namespace Snake_and_Ladder_Problem
                         if (Player_One_Position < 100)
                         {
                             Player_One_Position = Player_One_Position + rolls;
-
+                            count_of_die_rolls = count_of_die_rolls + 1;
+                            Console.WriteLine("Player Position is:" + Player_One_Position);
                         }
                         break;
                     case SNAKE:
@@ -47,6 +48,7 @@ namespace Snake_and_Ladder_Problem
                 }
 
                 Console.WriteLine("Player Position is:" + Player_One_Position);
+                Console.WriteLine("Count of Die_rolls is:" + count_of_die_rolls);
             }
         }
     }
