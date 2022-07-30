@@ -28,7 +28,12 @@ namespace Snake_and_Ladder_Problem
                         Player_One_Position = Player_One_Position + 0;
                         break;
                     case LADDER:
-                        Player_One_Position = Player_One_Position + rolls;
+                        
+                        if (Player_One_Position < 100)
+                        {
+                            Player_One_Position = Player_One_Position + rolls;
+
+                        }
                         break;
                     case SNAKE:
                         Player_One_Position = Player_One_Position - rolls;
